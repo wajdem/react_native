@@ -1,23 +1,9 @@
-// // import { Routes, Route } from "react-router-dom";
-// import Ex1 from "./container/Ex1"
-// import Ex2 from "./container/Ex2"
-
-// function App() {
-//   return(
-//     <div>
-//       <Ex1/>
-//       <Ex2/>
-//     </div>
-//   )
-// }
-
-// export default App;
 import { StyleSheet, Text, View } from 'react-native';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text style={{color:"#ffff"}}>hi wajde</Text>
+      <Text style={{color:"#ffff"}}>hi wajde mosbah abuarqob</Text>
     </View>
   );
 }
