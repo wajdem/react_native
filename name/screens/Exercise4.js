@@ -1,32 +1,29 @@
-import React from 'react'
-import { View,Text,StyleSheet } from 'react-native'
+import {useState} from 'react'
+import { View,Text, StyleSheet } from 'react-native'
+import Button from '../components/Button';
 
 const Exercise4 = () => {
+  const [count, setCount] = useState(0);
+
+  const handleButtonTouch = () => {
+    setCount(count + 1);
+  };
+
   return (
     <View style={styles.container}>
-      <View style={styles.box}>
-        <Text style={styles.text}>Hello World!</Text>
-      </View>
+      <Text>You have pressed the button {count} time(s)</Text>
+      <Button onPress={handleButtonTouch} text="Tap Me" />
     </View>
-  )
-}
-
+  );
+};
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "gray",
-  },
-  box: {
-    height: 100,
-    width: 100,
-    backgroundColor: "blue",
-    alignItems: 'center',
+    gap: 10,
     justifyContent: 'center',
+    alignItems: 'center',
   },
-  text:{
-    color: "white",
-  }
-})
+});
 
 export default Exercise4
