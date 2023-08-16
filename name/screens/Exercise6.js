@@ -1,32 +1,44 @@
-import React from 'react'
-import { View,Text,StyleSheet } from 'react-native'
+import React from "react";
+import { FlatList, View, StyleSheet, ScrollView,Text } from "react-native";
 
-const Exercise6 = () => {
+const App = () => {
+  const data = Array.from({ length: 15 }, (_, index) => ({
+    key: (index),
+  }));
+
+
+  const getRandomColor = () => {
+    const red = Math.floor(Math.random() * 256);
+    const green = Math.floor(Math.random() * 256);
+    const blue = Math.floor(Math.random() * 256);
+    return `rgb(${red},${green},${blue})`;
+  };
+
   return (
-    <View style={styles.container}>
-      <View style={styles.box}>
-        <Text style={styles.text}>Hello World!</Text>
+    <ScrollView contentContainerStyle={styles.container}>
+      {data.map(item => (
+      <View
+        key={item.key}
+        style={[styles.square, { backgroundColor: getRandomColor() }]}
+      >
+        <Text>{item.key+1}</Text>
       </View>
-    </View>
-  )
-}
-
+      ))}
+    </ScrollView>
+  );
+};
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: "gray",
+    alignItems: "center",
   },
-  box: {
-    height: 100,
+  square: {
     width: 100,
-    backgroundColor: "blue",
-    alignItems: 'center',
-    justifyContent: 'center',
+    height: 100,
+    marginVertical: 10,
+    justifyContent: "center",
+    alignItems: "center",
   },
-  text:{
-    color: "white",
-  }
-})
+});
 
-export default Exercise6
+export default App;

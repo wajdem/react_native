@@ -1,32 +1,38 @@
-import React from 'react'
-import { View,Text,StyleSheet } from 'react-native'
+import {useEffect,useState} from 'react'
+import { View,Text, FlatList,StyleSheet } from 'react-native'
+import axios from "axios"
 
 const Exercise9 = () => {
-  return (
-    <View style={styles.container}>
-      <View style={styles.box}>
-        <Text style={styles.text}>Hello World!</Text>
-      </View>
+  const [users,setUsers] = useState([])
+
+  const renderItem = ({ item }) => (
+    <View style={{borderBottomWidth:1, marginBottom:10}}>
+      <Text>Name: {item.name.title} {item.name.first} {item.name.last} </Text>
     </View>
+  );
+
+  useEffect(() => {
+    axios.get('https://randomuser.me/api/?results=100&inc=name')
+  .then(response => {
+    setUsers(response.data.results)
+  })
+  .catch(error => {
+    console.error('Error:', error);
+  });
+  },[])
+  return (
+    <FlatList style={{marginVertical:10}}
+      data={users}
+      renderItem={renderItem}/>
   )
 }
 
-
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "gray",
+  userCard: {
+    padding: 10,
+    marginBottom: 10,
+    marginHorizontal: 10,
   },
-  box: {
-    height: 100,
-    width: 100,
-    backgroundColor: "blue",
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  text:{
-    color: "white",
-  }
-})
+});
 
 export default Exercise9

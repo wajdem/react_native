@@ -1,12 +1,12 @@
 import React from 'react'
-import { View,Text,StyleSheet } from 'react-native'
+import { View,Text, StyleSheet } from 'react-native'
 
 const Exercise5 = () => {
   return (
     <View style={styles.container}>
-      <View style={styles.box}>
-        <Text style={styles.text}>Hello World!</Text>
-      </View>
+      <View style={[styles.square, { backgroundColor: 'red' }]} />
+      <View style={[styles.square, { backgroundColor: 'green' }]} />
+      <View style={[styles.square, { backgroundColor: 'blue' }]} />
     </View>
   )
 }
@@ -15,18 +15,15 @@ const Exercise5 = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "gray",
-  },
-  box: {
-    height: 100,
-    width: 100,
-    backgroundColor: "blue",
-    alignItems: 'center',
+    flexDirection: "row",
     justifyContent: 'center',
+    alignItems: 'center',
   },
-  text:{
-    color: "white",
-  }
-})
+  square: {
+    width: 100,
+    height: 100,
+    marginHorizontal: 10,
+  },
+});
 
 export default Exercise5
