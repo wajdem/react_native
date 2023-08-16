@@ -1,7 +1,7 @@
 import React from 'react'
 import { View,Text,StyleSheet } from 'react-native'
 
-const Exercise1 = () => {
+const Exercise12 = () => {
   return (
     <View style={styles.container}>
       <View style={styles.box}>
@@ -29,4 +29,4 @@ const styles = StyleSheet.create({
   }
 })
 
-export default Exercise1
+export default Exercise12

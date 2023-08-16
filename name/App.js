@@ -1,24 +1,24 @@
 import 'react-native-gesture-handler'
-import { StyleSheet, Text, View } from 'react-native';
-import {SimpleLineIcons,MaterialIcons,MaterialComunityIcons,FontAwesome} from '@expo/vector-icons'
+// import { StyleSheet, Text, View } from 'react-native';
+// import {SimpleLineIcons,MaterialIcons,MaterialComunityIcons,FontAwesome} from '@expo/vector-icons'
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { NavigationContainer } from '@react-navigation/native';
 import { createDrawerNavigator } from '@react-navigation/drawer';
-import HomeScreen from "./src/screens/HomeScreen";
-import Exercise1 from "./src/screens/Exercise1";
-import Exercise2 from "./src/screens/Exercise2";
-import Exercise3 from "./src/screens/Exercise3";
-import Exercise4 from "./src/screens/Exercise4";
-import Exercise5 from "./src/screens/Exercise5";
-import Exercise6 from "./src/screens/Exercise6";
-import Exercise7 from "./src/screens/Exercise7";
-import Exercise8 from "./src/screens/Exercise8";
-import Exercise9 from "./src/screens/Exercise9";
-import Exercise10 from "./src/screens/Exercise10";
-import Exercise11 from "./src/screens/Exercise11";
-import Exercise12 from "./src/screens/Exercise12";
-import Profile from "./src/screens/Profile";
-import { StatusBar } from 'expo-status-bar';
+import HomeScreen from "./screens/HomeScreen";
+import Exercise1 from "./screens/Exercise1";
+import Exercise2 from "./screens/Exercise2";
+import Exercise3 from "./screens/Exercise3";
+import Exercise4 from "./screens/Exercise4";
+import Exercise5 from "./screens/Exercise5";
+import Exercise6 from "./screens/Exercise6";
+import Exercise7 from "./screens/Exercise7";
+import Exercise8 from "./screens/Exercise5";
+import Exercise9 from "./screens/Exercise9";
+import Exercise10 from "./screens/Exercise10";
+import Exercise11 from "./screens/Exercise11";
+import Exercise12 from "./screens/Exercise12";
+import Profile from "./screens/Profile";
+// import { StatusBar } from 'expo-status-bar';
 
 const Drawer = createDrawerNavigator()
 
