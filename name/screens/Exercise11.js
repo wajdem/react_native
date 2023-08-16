@@ -1,32 +1,12 @@
 import React from 'react'
-import { View,Text,StyleSheet } from 'react-native'
+import { View,Text } from 'react-native'
 
 const Exercise11 = () => {
   return (
-    <View style={styles.container}>
-      <View style={styles.box}>
-        <Text style={styles.text}>Hello World!</Text>
-      </View>
+    <View>
+        <Text>Exercise 11</Text>
     </View>
   )
 }
-
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "gray",
-  },
-  box: {
-    height: 100,
-    width: 100,
-    backgroundColor: "blue",
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  text:{
-    color: "white",
-  }
-})
 
 export default Exercise11
