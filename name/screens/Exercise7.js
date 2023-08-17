@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { View, Text, StyleSheet, TextInput, Alert } from 'react-native';
 import { useNavigation } from '@react-navigation/native'; // Import useNavigation
 import Button from '../components/Button';
-import Profile from "./Profile";
+// import Profile from "./Profile";
 
 const Exercise7 = () => {
   const navigation = useNavigation(); // Get navigation instance
