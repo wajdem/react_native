@@ -1,7 +1,7 @@
 import 'react-native-gesture-handler'
 import { StyleSheet, Text, View } from 'react-native';
 // import {SimpleLineIcons,MaterialIcons,MaterialComunityIcons,FontAwesome} from '@expo/vector-icons'
-// import { SafeAreaView } from 'react-native-safe-area-context';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import { NavigationContainer } from '@react-navigation/native';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import HomeScreen from "./screens/HomeScreen";
